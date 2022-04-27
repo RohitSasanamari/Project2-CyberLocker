@@ -2,6 +2,48 @@
 <html lang="en">
 
 <head>
+  <script>
+    function validate(){
+      var fname = document.reg_form.name;
+      var femail = document.reg_form.email;
+      var fphone = document.reg_form.phone;
+      var fpassword = document.reg_form.password;
+      var frepPassword = document.reg_form.repeat_password;
+      if(fname.value.length <= 0) {
+        alert("Name cannot be empty");
+        fname.focus();
+        return false;
+      }
+      if(femail.value.length <= 0){
+        alert("Email cannot be empty");
+        femail.focus();
+        return false;
+      }
+      if(fphone.value.length <=0 || fphone.value.length != 10){
+        alert("Phone number is either empty or less than 10 digit");
+        fphone.focus();
+        return false;
+      }
+      if(fpassword.value.length <=0 || frepPassword.value.length <= 0){
+        alert("Password cannot be empty");
+        fpassword.focus();
+        frepPassword.focus();
+        return false;
+      }
+      if(fpassword.value != frepPassword.value){
+        alert("Password doesn't match");
+        return false;
+      }
+      if(confirm("Do you want to create your account ?")){
+        alert("Account created");
+      }
+      else{
+        return false;
+      }
+    }
+  </script>
+
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -79,7 +121,7 @@
           </div>
         </div>
         <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/a.png" alt=""  height="600px" width="auto" style="margin-left: -20px; margin-top: -70px;">
+          <img src="assets/img/a.png" alt="" height="600px" width="auto" style="margin-left: -20px; margin-top: -70px;">
         </div>
       </div>
 
@@ -177,47 +219,43 @@
           <article class="card-body mx-auto" style="max-width: 500px;">
             <h4 class="card-title mt-3 text-center">Create Account</h4>
             <p class="text-center">Get started with your free account</p>
-            <form>
+            <form name = "reg_form" action="assets/php/index.php" method="post" onsubmit="return validate()">
               <div class="form-group input-group">
                 <div class="input-group-prepend" data-aos="fade-right">
                   <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
-                <input name="" class="form-control" placeholder="Full name" type="text" data-aos="fade-left">
-              </div> <!-- form-group// -->
-              <div class="form-group input-group">
-                <div class="input-group-prepend" data-aos="fade-right">
-                  <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
-                </div>
-                <input name="" class="form-control" placeholder="Email address" type="email" data-aos="fade-left">
+                <input name="name" class="form-control" placeholder="Name" type="text" data-aos="fade-left">
               </div> <!-- form-group// -->
               <div class="form-group input-group">
                 <div class="input-group-prepend" data-aos="fade-right">
                   <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
-                <select class="custom-select" data-aos="fade-left" style="max-width: 70px;">
-                  <option selected="">+91</option>
-                  <option value="1">+972</option>
-                  <option value="2">+198</option>
-                  <option value="3">+701</option>
-                </select>
-                <input name="" class="form-control" placeholder="Phone number" type="text" data-aos="fade-left">
+                <input name="phone" class="form-control" placeholder="Phone" type="text" data-aos="fade-left">
               </div> <!-- form-group// -->
-
               <div class="form-group input-group">
                 <div class="input-group-prepend" data-aos="fade-right">
-                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                  <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
                 </div>
-                <input class="form-control" placeholder="Create password" type="password" data-aos="fade-left">
+                <input name="email" class="form-control" placeholder="Email" type="email" data-aos="fade-left">
               </div> <!-- form-group// -->
               <div class="form-group input-group">
                 <div class="input-group-prepend" data-aos="fade-right">
                   <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="Repeat password" type="password" data-aos="fade-left">
+                <input name="password" class="form-control" placeholder="Password"  type="password" data-aos="fade-left">
+              </div> <!-- form-group// -->
+              <div class="form-group input-group">
+                <div class="input-group-prepend" data-aos="fade-right">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input name = "repeat_password" class="form-control" placeholder="Re-Enter Password" type="password" data-aos="fade-left">
               </div> <!-- form-group// -->
               <div class="form-group" data-aos="fade-up">
-                <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+                <input type="submit" name = "submit" value= "Register" class="btn btn-primary btn-block">
               </div> <!-- form-group// -->
+              <div class="form-group" data-aos="fade-up">
+                <input type="reset" name="reset" value="Reset" class="btn btn-primary btn-block">
+              </div>  
               <p class="text-center" data-aos="fade-up">Have an account? <a href="#sign-in">Log In</a> </p>
             </form>
           </article>
