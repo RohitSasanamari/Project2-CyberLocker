@@ -507,7 +507,7 @@
               <h4>Send us a message</h4>
               <p>Have any queries ? Feel free to send us in your query.</p>
 
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form method="POST" class="email-form" data-netlify="true">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
@@ -518,16 +518,9 @@
                   <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="Message" rows="5" placeholder="Message" required></textarea>
                 </div>
-
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                <div class="text-center"><button type="submit" >Send Message</button></div>
               </form>
 
             </div>
