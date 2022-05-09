@@ -272,21 +272,21 @@
           <article class="card-body mx-auto" style="max-width: 500px;">
             <h4 class="card-title mt-3 text-center">Already registered ?</h4>
             <p class="text-center">Sign In</p>
-            <form>
+            <form method="post" action="assets/php/loginConfig.php">
               <div class="form-group input-group">
                 <div class="input-group-prepend" data-aos="fade-right">
                   <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
                 </div>
-                <input name="" class="form-control" placeholder="Email address" type="email" data-aos="fade-left">
+                <input name="email" class="form-control" placeholder="Email address" type="email" data-aos="fade-left">
               </div> <!-- form-group// -->
               <div class="form-group input-group">
                 <div class="input-group-prepend" data-aos="fade-right">
                   <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="Password" type="password" data-aos="fade-left">
+                <input name= "password" class="form-control" placeholder="Password" type="password" data-aos="fade-left">
               </div> <!-- form-group// -->
               <div class="form-group" data-aos="fade-up">
-                <button type="submit" class="btn btn-primary btn-block"> Sign in </button>
+                <input type="submit" name="submit" value="Sign in" class="btn btn-primary btn-block">
               </div> <!-- form-group// -->
               <p class="text-center" data-aos="fade-up">Doesn't have account? <a href="#sign-up">Sign Up</a> </p>
             </form>
