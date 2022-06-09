@@ -11,7 +11,7 @@ $result=mysqli_fetch_array($res);
 if($result)
 {
 echo "You are login Successfully ";
-header("Location:http://localhost/cyberlocker/User.html");  
+header("Location: http://localhost/cyberlocker/User.html");  
 }
 else
 {

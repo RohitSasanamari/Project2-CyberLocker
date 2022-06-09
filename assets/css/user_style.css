@@ -7,7 +7,7 @@
   font-family: "Open Sans", sans-serif;
 }
 .wrapper{
-  background: transparent;;
+  background: transparent;
   position: fixed;
   width: 100%;
 }
@@ -40,7 +40,7 @@ nav .content .links{
 }
 .content .links li a,
 .content .links li label{
-  color: #1bb1dc;
+  color:#444 ;
   font-size: 14px;
   
   font-weight: 600;
@@ -48,17 +48,17 @@ nav .content .links{
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-.content .links li label{
-  display: none;
-}
+
+
+
 .content .links li a:hover,
 .content .links li label:hover{
   color: #444;
 }
 .links1{
-  font-size: 27px;
+  font-size: 20px;
   color: #444;
-  padding-right: 57%;
+  padding-right: 110%;
   padding-left: 10%;
 
 }
@@ -183,7 +183,7 @@ nav .content .links{
   .content .links ul li a{
     font-size: 18px;
     line-height: 30px;
-    border-radius: 5px!important;
+    border-radius: 5px;
   }
 }
 
@@ -197,7 +197,7 @@ nav .content .links{
   
 }
 
-.dummy-text{
+.text{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -207,11 +207,31 @@ nav .content .links{
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.dummy-text h1{
+.text h1{
    color: #1bb1dc;
   font-size: 45px;
   margin: 5px 0;
 }
-#myFile{
-    color: #444;
-}
+.button {
+    background: white;
+    color:#1bb1dc;
+    border-style: outset;
+    border-color: #0066A2;
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial,sans-serif;
+    text-shadow: none;
+   margin: 10px;
+    }
+    .button:hover{
+        background: #1bb1dc;
+        color: #fff;
+
+    }
+    
+ .img{
+     padding-left: 52%;
+
+    width: 10%;
+    height: 10vh;
+    }
