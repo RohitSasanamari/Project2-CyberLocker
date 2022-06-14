@@ -10,8 +10,8 @@ $res = mysqli_query($conn,$sql);
 $result=mysqli_fetch_array($res);
 if($result)
 {
-echo "You are login Successfully ";
-header("Location: http://localhost:5000/cyberlocker/User.html");  
+	echo '<script>alert("Successfully logged in.")</script>';
+header("Location: http://localhost:5000/");  
 }
 else
 {

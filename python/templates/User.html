@@ -7,11 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="../user_style.css">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <link rel="stylesheet" href="http://localhost/cyberlocker/assets/css/user_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <style>
     body {
-      background-image: url('assets/img/intro-bg.jpg');
+      background-image: url('http://localhost/cyberlocker/assets/img/intro-bg.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100%;
@@ -44,9 +52,13 @@
     <h1>SECURE YOUR DOCS NOW!</h1><br>
     <label> Choose the file to upload:</label>
     <input class="choose" type="file" id="myfile" /><br><br>
-    <form action="/my-link/">
-      <input type="submit" value="Encrypt" />
-    </form>
+    <div class="form-group" data-aos="fade-up">
+      <form action="/my-link/">
+        <input type="submit" name= "Encrypt" class="btn-primary" value="Encrypt" style="margin-left: 10px; border-radius: 4px; padding:8px">
+      </form>
+    </div>
+      <input type="submit" name="submit" value="Upload" class="btn-primary" style="margin-left: 10px; border-radius: 4px; padding:8px;"> 
+    
   </div>
 </body>
 
