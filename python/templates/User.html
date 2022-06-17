@@ -54,15 +54,17 @@
     <img src="">
   </div>
   <div class="text">
-    <h1 data-aos="fade-up">SECURE YOUR DOCS NOW!</h1><br>
-    <label data-aos="fade-up"> Choose the file to upload:</label>
-    <input data-aos="fade-up" class="choose" type="file" id="myfile" /><br><br>
-    <div class="form-group">
-      <form action="/my-link/">
-        <input data-aos="fade-up" type="submit" name= "Encrypt" class="btn-primary" value="Encrypt" style="margin-left: 10px; border-radius: 4px; padding:8px">
+    <h1 data-aos="fade-up" style="font-size: 65px; opacity: 0.8;">SECURE YOUR DOCS NOW!</h1><br>
+      <form action="/my-link/" method="POST"> 
+        <label data-aos="fade-up"> Choose the file to apply Encryption:</label>
+        <input data-aos="fade-up" class="choose" type="file" name="file"/> <br><br>
+        <input data-aos="fade-up" type="submit" name= "Encrypt" class="btn-primary" value="Encrypt" style="text-align: center; border-radius: 4px; padding:9px">
+      </form>
+      <form action="/my-link2/"> 
+        <input data-aos="fade-up" type="submit" name= "Decrypt" class="btn-primary" value="Decrypt" style="margin-top: 10px; text-align: center; border-radius: 4px; padding:9px">
       </form>
     </div>
-      <input data-aos="fade-up" type="submit" name="submit" value="Upload" class="btn-primary" style="margin-left: 10px; border-radius: 4px; padding:8px;"> 
+      
     
   </div>
 
