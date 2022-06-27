@@ -11,7 +11,7 @@ $result=mysqli_fetch_array($res);
 if($result)
 {
 	echo '<script>alert("Successfully logged in.")</script>';
-header("Location: http://localhost:5000/");  
+	header("Location: http://localhost:5000/");  
 }
 else
 {
